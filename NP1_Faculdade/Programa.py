@@ -1,19 +1,31 @@
 generos_filme = [
-    ["filme de ação 1", "filme de ação 2", "filme de ação 3"],
-    ["filme de comédia 1", "filme de comédia 2", "filme de comédia 3"],
-    ["filme de terror 1", "filme de terror 2", "filme de terror 3"],
+    ["Missão: Impossível", "Velozes e Furiosos", "John Wick"],
+    ["Se Beber, Não Case!", "As Branquelas", "Gente Grande"],
+    ["Invocação do Mal", "O Exorcista", "IT: A Coisa"],
 ]
 
 sinopse_filme = [
-    ["sinopse de ação 1", "sinopse de ação 2", "sinopse de ação 3"],
-    ["sinopse de comédia 1", "sinopse de comédia 2", "sinopse de comédia 3"],
-    ["sinopse de terror 1", "sinopse de terror 2", "sinopse de terror 3"],
+    [
+        "Um agente secreto enfrenta missões impossíveis repletas de ação e espionagem.",
+        "Corridas clandestinas, perseguições intensas e assaltos eletrizantes ao redor do mundo.",
+        "Um ex-assassino busca vingança contra aqueles que destruíram sua vida."
+    ],
+    [
+        "Após uma despedida de solteiro em Las Vegas, amigos acordam sem lembrar de nada.",
+        "Dois agentes disfarçados se passam por socialites para resolver um caso.",
+        "Um grupo de amigos revive momentos da infância com muito humor e confusão."
+    ],
+    [
+        "Investigadores paranormais enfrentam uma entidade demoníaca em uma casa assombrada.",
+        "Uma menina possuída aterroriza sua família, levando a um exorcismo assustador.",
+        "Um palhaço demoníaco aterroriza crianças em uma pequena cidade."
+    ]
 ]
 
 while True:
     escolha_genero = input("\nEscolha um gênero de filme para acessar a galeria:\n[1] Ação\n[2] Comédia\n[3] Terror\n[0] Sair\n")
     print("_______________")
-    
+
     if escolha_genero == "0":
         print("Saindo do programa...")
         break
@@ -23,7 +35,7 @@ while True:
         print(f"Filmes de {['Ação', 'Comédia', 'Terror'][indice_genero]}:")
         for i, filme in enumerate(generos_filme[indice_genero], start=1):
             print(f"[{i}] {filme}")
-            
+
         while True:
             escolha_filme = input("\nDeseja ver a descrição de qual filme? Digite o número ou [0] para voltar: ")
             if escolha_filme == "0":
